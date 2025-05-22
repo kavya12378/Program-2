@@ -1,4 +1,4 @@
-
+package program2;
 class student{
     String name;
     int age;
