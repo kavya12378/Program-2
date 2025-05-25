@@ -9,23 +9,27 @@ class Person {
         System.out.println("Name: " + name);
     }
 }
+
 class Employee extends Person {
     int empId;
+    String department;
 
-    Employee(String name, int empId) {
-        super(name); // calling the constructor of Person
+    Employee(String name, int empId, String department) {
+        super(name);
         this.empId = empId;
+        this.department = department;
     }
 
     void displayEmployeeDetails() {
-        displayPersonName(); // inherited method from Person
+        displayPersonName();
         System.out.println("Employee ID: " + empId);
-    }
-}
-public class personcls {
-    public static void main(String[] args) {
-        Employee e = new Employee("Kavya", 101);
-        e.displayEmployeeDetails();
+        System.out.println("Department: " + department);
     }
 }
 
+public class personcls {
+    public static void main(String[] args) {
+        Employee e = new Employee("Kavya", 101, "HR");
+        e.displayEmployeeDetails();
+    }
+}
